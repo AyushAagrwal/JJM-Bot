@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/error.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+
+  <body>
+    <div class="error-container">
+      <h1>Lost your way?</h1>
+      <p>
+        Oops! It looks like the page you're looking for doesn't exist. Don't
+        worry, you can still ask us anything about the Jal Jeevan Mission on our
+        home page.
+      </p>
+      <button onclick="window.location.href='/'">Go to Home</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JJM Guidelines Chatbot</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="info-container">
+        <button id="info-btn">i</button>
+        <div id="info-tooltip">
+          <p>This chatbot helps you with JJM Operational Guidelines.</p>
+          <p>Select a language and ask your question.</p>
+          <p>You can also search for related YouTube videos.</p>
+        </div>
+      </div>
+      <h1>Chat with JJM Operational Guidelines</h1>
+      <div id="language-selector">
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="kn">ಕನ್ನಡ</option>
+          <option value="ta">தமிழ்</option>
+          <option value="te">తెలుగు</option>
+          <option value="bn">বাংলা</option>
+        </select>
+      </div>
+      <div id="chat-container">
+        <div id="chat-box">
+          <div class="message assistant">
+            <img
+              src="{{ url_for('static', filename='images/bot.png') }}"
+              alt="Bot"
+              class="avatar"
+            />
+            <span>Ask me a question based on the guidelines</span>
+          </div>
+        </div>
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type your question here"
+        />
+        <div id="same-side">
+          <button id="send-btn">Send</button>
+          <button id="youtube-search-btn">YouTube Search</button>
+        </div>
+        <button id="clear-btn">Clear Chat History</button>
+        <!-- <button id="feedback-btn">Leave Feedback</button>
+        <div id="feedback-form" class="hidden feedback-container">
+          <textarea
+            id="feedback-text"
+            placeholder="Write your feedback here..."
+          ></textarea>
+          <button id="submit-feedback-btn">Submit Feedback</button>
+        </div> -->
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>
